@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Success!</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/wall.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navBar">
+        <div class="navLeft">
+            <h1>CodingDojo Wall</h1>
+        </div>
+        <div class="navRight">
+            {% for user in users %}
+                <div class="right-nav">
+                    <h4>Welcome, {{user['first_name']}}!</h4>
+                </div>
+                <div class="right-nav2">
+                    <form method="post" action="/logout">
+                        <input type="submit" class="button-resize" value="Log Out">
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+   
+    <div class="main-container">
+        <!-- Left Side Messages Component -->
+        <div class="leftSide">
+            <div class="messageContainer">
+                <table>
+                    <thead>
+                        <tr class="trfill">
+                            <th class="thfill"><h3 class="thfill2"><strong class="greenFont">( {{ messages_received}} )</strong>Message(s) for You</h3></th>
+                        </tr>   
+                    </thead>
+                    <tbody>
+                        {% for message in messages%}
+                        <tr class="infoRow">
+                            <td class="tdEntry"> <strong>{{message['first_name']}} said:</strong></td>
+                            <td class="tdEntry2">"{{message['message']}}"</td>
+                            <td class="tdEntry3"><form method="post" action="/delete_message/{{message['user_id']}}/{{message['recipient_id']}}"><input type="submit" class="button-resize" value="Delete">
+                            </form></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Right Side Send Message Component -->
+        <div class="rightSide">
+            <h2><strong>Send Messages</strong></h2>
+            <h3 class="greenText">You have sent {{messages_sent}} message(s) so far.</h3>
+            {% for user in all_users %}
+            <form method="post" action="/send_message/{{users[0]['id']}}" >
+                <div class="formStructure">
+                    <label class="msgLabel"><strong>{{user['first_name']}}</strong></label>
+                    <textarea id="message" name="message"rows="3"></textarea>  
+                    <input type="submit" class="buttonColor" value="Send">
+                    <input type="hidden" value="{{user['id']}}" name="recipient_id">
+                </div>
+            </form>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #17a2b8;
+    height: 100vh;
+
+    /* Safari 4-5, Chrome 1-9 */
+     background: -webkit-gradient(radial, center center, 0, center center, 460, from(#17a2b8), to(#00363e));
+    
+     /* Safari 5.1+, Chrome 10+ */
+     background: -webkit-radial-gradient(circle, #17a2b8, #00363e);
+   
+     /* Firefox 3.6+ */
+     background: -moz-radial-gradient(circle, #17a2b8, #00363e);
+   
+     /* IE 10 */
+     background: -ms-radial-gradient(circle, #17a2b8, #00363e);
+}
+ 
+
+/* Main Containers */
+
+.main_container {
+    margin: auto;
+    width: 650px;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.left_side {
+    margin: auto;
+    justify-content: flex-end;
+}
+
+.right_side {
+    margin: auto;
+    justify-content: flex-start;
+}
+
+/* Form Attributes */
+
+#container {
+    margin-top: -100px;
+}
+
+#login {
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 5px;
+}
+
+#login-column {
+    width: 100%;
+}
+
+#login-box {
+    margin-top: -120px;
+    width: 100%;
+}
+
+#login-form {
+    width: 100%;
+}
+
+#login .container #login-row #login-column #login-box {
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+}
+  
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+}
+
+#login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+}
+
+
+.flex-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Alert Messages */
+
+.alert {
+    margin: auto;
+    margin-bottom: 40px;
+    width: 500px;
+    border: 2px solid #222;
+    background-color: rgb(224, 45, 45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.alert > h2 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.alert > p {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}

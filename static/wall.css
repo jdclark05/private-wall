@@ -1,0 +1,261 @@
+body {
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(radial, center center, 0, center center, 460, from(#17a2b8), to(#00363e));
+    
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-radial-gradient(circle, #17a2b8, #00363e);
+  
+    /* Firefox 3.6+ */
+    background: -moz-radial-gradient(circle, #17a2b8, #00363e);
+  
+    /* IE 10 */
+    background: -ms-radial-gradient(circle, #17a2b8, #00363e);
+}
+
+/* NAV BAR */
+
+.navBar {
+    margin-top: 10px;
+    height: 50px;
+    background-color: #001619;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+}
+
+.navLeft {
+    margin-left: 10px;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.navLeft > h1 {
+    font-size: 1.5rem;
+}
+
+.navRight {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.navRight > h2 {
+    margin-left: 50px;
+    font-size: 1rem;
+}
+
+.right-nav {
+    margin-top: 10px;
+    width: 100%;
+    flex: 4;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.right-nav > h4 {
+    margin-right: 20px;
+    text-align: right;
+}
+
+.right-nav2 {
+    margin-top: 10px;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* MAIN BODY CONTAINER */
+.main-container {
+    width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* left side of container */
+.leftSide {
+    padding: 5px;
+    background-color: #e9e9e9;
+    margin-right: 10px;
+    width: 400px;
+    flex: 1;
+    border: 2px solid rgb(154, 154, 154);
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.messageContainer {
+    border-bottom: 2px solid rgb(154, 154, 154);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+thead {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+thead > tr {
+    width: 100%;
+}
+
+.trfill {
+    display: flex;
+    justify-content: center;
+}
+
+.thfill {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 2px solid rgb(154, 154, 154);
+}
+
+.thfill2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.greenFont {
+    margin-left: 100px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    color: rgb(43, 199, 51);
+}
+
+.greenFont > h3 {
+    text-align: center;
+}
+
+tbody {
+    width: 100%;
+}
+
+.infoRow{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 2px solid rgb(154, 154, 154);
+}
+
+.tdEntry {
+    flex: 2;
+}
+
+.tdEntry2 {
+    flex: 3;
+}
+
+.tdEntry3 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tdEntry3 > form {
+    margin-top: 5px;
+    align-content: center;
+}
+
+/* right side of container */
+.rightSide {
+    padding: 5px;
+    background-color: #e9e9e9;
+    margin-left: 10px;
+    width: 400px;
+    flex: 1;
+    border: 2px solid rgb(154, 154, 154);
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.rightSide > h2 {
+    text-align: center;
+    border-bottom: 2px solid rgb(154, 154, 154);
+    padding-bottom: 10px;
+}
+
+.greenText {
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(38, 154, 38);
+}
+
+.infoRow2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.formStructure {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.msgLabel {
+    padding-left: 25px;
+    flex: 1;
+}
+
+#message {
+    flex: 4;
+    width: 80%;
+    margin-right: 20px;
+}
+
+form > input {
+    align-items: center;
+}
+
+.btn-group {
+    width: 100%;
+    height: 100%;
+}
+
+.button-resize {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    background-color: rgb(200, 37, 37);
+    color: white;
+}
+
+.buttonColor {
+    flex: 1;
+    align-items: center;
+    width: 80%;
+    height: 25px;
+    border-radius: 5px;
+    background-color: rgb(43, 199, 51);
+    color: rgb(0, 0, 0);
+}
+
+.container-fluid {
+    margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 10px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+h4 {
+    font-size: 1rem;
+}
