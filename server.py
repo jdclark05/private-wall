@@ -128,7 +128,6 @@ def send_message(user_id):
 @app.route('/delete_message/<int:user_id>/<int:recipient_id>', methods=['POST'])
 def delete_message(user_id, recipient_id):
     if session.get("user_id") != recipient_id:
-        #TODO redirect to donger page
         return redirect('/')
     query = "DELETE FROM messages WHERE user_id = %(user_id)s AND recipient_id = %(recipient_id)s;"
     data = {
